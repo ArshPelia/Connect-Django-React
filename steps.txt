@@ -1,0 +1,31 @@
+BACKEND:
+
+    1. CREATE VIR ENVIRONMENT
+
+    2. Required Installs: 
+        BE: pip install django, djangorestframework django-cors-headers 
+
+    3. create Django BE 
+        - django-admin startproject backend
+
+    4. Next, navigate into the newly created backend directory & Start a new application
+        - python manage.py startapp app
+
+    5. Register the Application in Settings.py
+        - add the following to INSTALLED_APPS: 
+            'corsheaders',
+            'rest_framework',
+            'todo',
+
+        - add the following to MIDDLEWARE:
+            'corsheaders.middleware.CorsMiddleware',
+
+    6. Create User Model + Admin and migrate
+        - add all models to admin.py
+
+    python manage.py runserver 
+
+FRONTEND:
+
+    3. Required Installs: 
+        FE: npm install axios
